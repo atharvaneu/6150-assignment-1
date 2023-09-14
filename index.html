@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./index.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.svg">
 
     <title>Assignment 1</title>
 </head>
@@ -13,14 +13,22 @@
 <body>
     <nav>
         <div class="nav-container">
-            <h1 class="font-heading-primary">TYPEMASTER <span class="font-keyboard">Mechanical
-                    Keyboards</span></h1>
+            <a href="/" class="nav-logo">
+                <h1 class="font-heading-primary">TYPEMASTER <span class="font-keyboard">Mechanical
+                        Keyboards</span></h1>
+            </a>
             <input placeholder="Search for keyboards, mouse - whatever you like!" />
-            <div class="">
-                <a href="" class="margin-x">Products</a>
-                <a href="" class="margin-x">About</a>
-                <a href="" class="margin-x">Buying in bulk? Contact sales</a>
-            </div>
+            <menu class="nav-links">
+                <li>
+                    <a href="/index.html" class="margin-x">Products</a>
+                </li>
+                <li>
+                    <a href="/about.html" class="margin-x">About</a>
+                </li>
+                <li>
+                    <a href="/contact-us.html" class="margin-x">Contact sales</a>
+                </li>
+            </menu>
         </div>
     </nav>
     <section class="first grid">
@@ -33,10 +41,10 @@
                     Best selling keyboard and winner of the 2022 Keyboard Warrior Global Conference
                 </p>
                 <p class="margin-top">Reviewed
-                    <img src="/assets/images/star-solid.svg" width="15px" />
-                    <img src="/assets/images/star-solid.svg" width="15px" />
-                    <img src="/assets/images/star-solid.svg" width="15px" />
-                    <img src="/assets/images/star-solid.svg" width="15px" /> (126 ratings)
+                    <img src="/assets/icons/star-solid.svg" width="15px" />
+                    <img src="/assets/icons/star-solid.svg" width="15px" />
+                    <img src="/assets/icons/star-solid.svg" width="15px" />
+                    <img src="/assets/icons/star-solid.svg" width="15px" /> (126 ratings)
                 </p>
                 <p class="margin-top font-large font-numerical"><span
                         class="strikethrough font-medium font-numerical">$100</span> $79.99</p>
@@ -87,7 +95,8 @@
         </div>
         <div class="centerize vertically-center">
 
-            <img src="https://i.pcmag.com/imagery/roundups/02th3QKnG4NLgUrOSBe1cfh-21..v1586994841.jpg" width="80%" />
+            <img class="product-image"
+                src="https://i.pcmag.com/imagery/roundups/02th3QKnG4NLgUrOSBe1cfh-21..v1586994841.jpg" width="80%" />
             <div class="button-carousel">
                 <button class="primary-button text-white">Buy</button>
                 <button class="secondary-button text-white">Add to cart</button>
@@ -97,7 +106,8 @@
     </section>
     <section class="second grid">
         <div class="centerize vertically-center">
-            <img src="https://knowtechie.com/wp-content/uploads/2022/10/wombat-keyboard-for-mac.webp" width="100%" />
+            <img class="product-image"
+                src="https://knowtechie.com/wp-content/uploads/2022/10/wombat-keyboard-for-mac.webp" width="100%" />
             <div class="button-carousel">
                 <button class="primary-button text-white">Buy</button>
                 <button class="secondary-button text-white">Add to cart</button>
@@ -112,10 +122,10 @@
                     Best selling keyboard of 2021 and loved by our gamer community
                 </p>
                 <p class="margin-top">Reviewed
-                    <img src="/assets/images/star-solid.svg" width="15px" />
-                    <img src="/assets/images/star-solid.svg" width="15px" />
-                    <img src="/assets/images/star-solid.svg" width="15px" />
-                    <img src="/assets/images/star-solid.svg" width="15px" /> (578 ratings)
+                    <img src="/assets/icons/star-solid.svg" width="15px" />
+                    <img src="/assets/icons/star-solid.svg" width="15px" />
+                    <img src="/assets/icons/star-solid.svg" width="15px" />
+                    <img src="/assets/icons/star-solid.svg" width="15px" /> (578 ratings)
                 </p>
                 <p class="margin-top font-large font-numerical"><span
                         class="strikethrough font-medium font-numerical">$150</span>
@@ -168,12 +178,34 @@
         </div>
 
     </section>
+    <section class="third">
+        <div class="about-us-container margin-top">
+
+            <h1 class="font-heading-secondary margin-top">Checkout what our team has been working on!</h1>
+
+            <video controls width="100%" class="advert margin-top">
+
+                <source src="/assets/video/advertisement.mp4" type="video/mp4" />
+
+                Download the
+                <a href="/assets/video/advertisement.mp4">MP4</a>
+                video.
+            </video>
+
+            <h1 class="font-heading-secondary margin-top">Do a sound test of our keyboards before you buy!</h1>
+
+            <audio controls src="/assets/audio/soundtest.mp3" class="advert margin-top">
+                <a href="/assets/audio/soundtest.mp3">Download audio</a>
+            </audio>
+
+        </div>
+    </section>
     <footer class="footer-container">
         <div>@ 2023 TYPEMASTER Inc. All rights reserved.</div>
         <div class="vertically-center">Connect with us on social media:
-            <img src="/assets/images/twitter.svg" />
-            <img src="/assets/images/instagram.svg" />
-            <img src="/assets/images/linkedin.svg" />
+            <img src="/assets/icons/twitter.svg" />
+            <img src="/assets/icons/instagram.svg" />
+            <img src="/assets/icons/linkedin.svg" />
         </div>
     </footer>
 </body>

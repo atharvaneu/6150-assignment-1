@@ -4,10 +4,11 @@
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
 nav {
-    background: #6a5acd;
+    background: #241d4e;
     color: #eeeeee;
     top: 0;
     left: 0;
@@ -40,14 +41,14 @@ a:hover {
 
 }
 
-input {
+input, textarea {
     padding: 10px;
     min-width: 40%;
     border: none;
     border-radius: 10px;
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline:none;
 }
 
@@ -77,16 +78,39 @@ tr:hover {
 
 }
 
+li {
+    list-style: none;
+}
+
+.nav-logo {
+    text-decoration: none;
+}
+
+.nav-logo:hover {
+    color:#FFFFFF;
+}
+
+.nav-links {
+    display: flex;
+}
+
 /* Classes */
 .first {
-    background: #8A2BE2;
+    background: #5e1c9b;
     color:#FFFFFF;
     min-height: 100vh;
     border-bottom: 2px solid rgb(141, 141, 141);
 }
 
 .second {
-    background: #9932CC;
+    background: #7623a0;
+    color:#FFFFFF;
+    min-height: 100vh;
+
+}
+
+.third {
+    background: #3c1a4d;
     color:#FFFFFF;
     min-height: 100vh;
 
@@ -133,6 +157,10 @@ tr:hover {
 
 }
 
+.product-image {
+    border: 2px solid rgb(52, 52, 52);
+}
+
 .switch-table-primary {
     background: #6d16be;
 }
@@ -149,6 +177,8 @@ tr:hover {
     text-align: center;
 }
 
+
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -156,14 +186,58 @@ tr:hover {
 }
 
 
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
 
-    .button-carousel {
-        margin: 3rem 0 0 0;
-    }
+
+/* Contact us CSS */
+.form-container {
+    margin: 0 auto;
+    max-width: 40%;
+}
+
+.dual-input-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6px;
+    gap: 6px;
+}
+
+.contact-us-input {
+    width: 100%;
+}
+
+.form-submit-button {
+    margin: 10px auto 0 auto;
+}
+
+.form-submit-button:hover {
+    cursor: pointer;
+    background-color: #b6b6b6;
+}
+
+/* About us CSS */
+.about-us-container {
+    margin: 0 auto 0 auto;
+    max-width: 50%;
+}
+
+.faq-item {
+    margin: 6px 0 6px 0;
+    padding: 10px;
+    background-color: #6b1795;
+    border-radius: 6px;
+}
+
+.faq-item:hover {
+    background-color: #531273;
+    cursor: pointer;
+}
+
+.faq-item-answer {
+    margin-top: 16px;
+}
+
+.advert {
+    border-radius: 6px;
 }
 
 /* single styling purpose classes */
@@ -228,3 +302,37 @@ tr:hover {
 .strikethrough {
     text-decoration: line-through;
 }
+
+
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+    .form-container {
+        max-width: 70%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-carousel {
+        margin: 3rem 0 0 0;
+    }
+
+    .about-us-container {
+        max-width: 95%;
+    }
+
+    .dual-input-container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        max-width: 90%;
+    }
+
+}
+
