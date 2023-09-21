@@ -25,20 +25,21 @@ It is my portfolio website that contains my academic, professional information a
 Create your professional portfolio website (like LinkedIn Professional portfolio) and add the content accordingly. Here below are the additional guidelines:
 
 1. Below, HTML and HTML5 controls MUST be there, and feel free to add more HTML and HTML5 controls.
-   Favicon
-   Table
-   Form
-   Images
-   Hyperlink
-   Button
-   audio
-   video
-   header
-   footer
-   summary
-   menu
-   tel for contact information
-   mailto for contact information
+
+   - Favicon
+   - Table
+   - Form
+   - Images
+   - Hyperlink
+   - Button
+   - audio
+   - video
+   - header
+   - footer
+   - summary
+   - menu
+   - tel for contact information
+   - mailto for contact information
 
 2. Use an external CSS file only.
 3. Use of float and overflow property
