@@ -1,45 +1,52 @@
 # 6150-assignment-1
 
-The above site is made using `HTML5` and `CSS` as part of assignment 1 for INFO 6150 course.
+The above site is made using `HTML5` and `CSS` as part of assignment 2 for INFO 6150 course.
 
-It is a Mechanical Keyboard e-commerce site which allows people to buy OR add various keyboards to cart.
+It is my portfolio website that contains my academic, professional information along with tech certifications.
 
 ---
 
 ### File structure explained:
 
-`/assets`: contains all media such as favicon,icons, sample video and audio.
+`/assets`: contains all media such as favicon, icons, sample video, audio and certifications.
 
-`index.html`: its the main landing page of site. It shows the sample products (keyboards) that are available to be bought.
+`index.html`: its the main page of the portfolio website.
 
 `index.css`: the global CSS stylesheet where rules for all html files can be found.
 
-`about.html`: contains more information about the sample keyboard company.
-
-`contact-us.html`: contains the form were customers can contact the company customer service OR their email and phone.
+`contact-us.html`: contains the form were potential hirers (or even non-hirers) to get in touch with me.
 
 `README.md`: this page :)
 
 ---
 
-References:
-Favicon: https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Akeyboard%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+**Assignment description:**
 
-Star icon: https://fontawesome.com/icons/star?f=classic&s=solid&pc=%23ffb61a
+Create your professional portfolio website (like LinkedIn Professional portfolio) and add the content accordingly. Here below are the additional guidelines:
 
-Keyboard product 1: https://i.pcmag.com/imagery/roundups/02th3QKnG4NLgUrOSBe1cfh-21..v1586994841.jpg
+1. Below, HTML and HTML5 controls MUST be there, and feel free to add more HTML and HTML5 controls.
+   Favicon
+   Table
+   Form
+   Images
+   Hyperlink
+   Button
+   audio
+   video
+   header
+   footer
+   summary
+   menu
+   tel for contact information
+   mailto for contact information
 
-Keyboard product 2:
-https://knowtechie.com/wp-content/uploads/2022/10/wombat-keyboard-for-mac.webp
-
-Cherry MX Red switch: https://i.etsystatic.com/24531479/r/il/8349f5/3686166369/il_570xN.3686166369_ph3d.jpg
-
-Cherry MX Blue switch: https://thermaltakeusa.com/cdn/shop/files/l20gt05.jpg?v=1691161672&width=1445
-
-Gateron Red switch: https://ae01.alicdn.com/kf/H212aa74cf3094bb7a168239867a43a2fA.jpg
-
-Sample video:
-https://www.youtube.com/watch?v=89I18JEM0fE
-
-Sample audio:
-https://www.youtube.com/shorts/6Vybqjk7zPQ
+2. Use an external CSS file only.
+3. Use of float and overflow property
+4. Use of column layout structure
+5. Use of absolute and relative position whenever necessary
+6. Add a table, then style the table using CSS selectors. Guide for CSS Selectors - http://www.w3schools.com/cssref/css_selectors.aspLinks to an external site.
+7. Create a professional image gallery for certifications, etc., with hover effects and figure captions. Include this in your portfolio.
+8. Make the website responsive using media queries for devices like iPad(768px) and Smart phones (350 – 365px). For example, below pic is a sample (scroll down 2nd page)
+9. There is more weightage on the responsiveness of the page and media query implementation. Fail to implement will be reflected in the grading.
+10. Include the readme.txt/readme.md file and include all the tags used and give a short description
+11. The assignment must be submitted on your PRIVATE GitHub account (use Northeastern email account). The zip file must be submitted on CANVAS, and the GitHub URL of the assignment must be in the canvas remarks.

@@ -13,25 +13,25 @@
 <body>
     <menu style="position: fixed; top: 20px; right:40px;">
         <a href="/assignment-2/" class="menu-item">Back</a>
-        <a href="/assignment-2/contact-us.html" class="menu-item">Get in touch with me!</a>
+        <a href="/assignment-2/contact-me.html" class="menu-item">Get in touch with me!</a>
         <a href="https://github.com/atharvaneu/" class="menu-item" target="_blank">Checkout my GitHub</a>
     </menu>
     <section class="first contact-us-container">
         <h1 class="font-heading-secondary centerize">Send me a message</h1>
         <form class="form-container margin-top">
-            <div class="dual-input-container">
+            <div class="dual-input-container" style="float: left;">
                 <input type="text" class="contact-us-input" id="name" name="name" placeholder="Name"
                     required>
 
             </div>
 
-            <div class="dual-input-container">
+            <div class="dual-input-container" style="overflow: hidden; margin-left: 6px;">
                 <input type="email" class="contact-us-input" id="email" name="email" placeholder="Email address"
                     required>
             </div>
 
 
-            <textarea name="message" rows="4" style="width: 100%;" placeholder="Message" required></textarea>
+            <textarea name="message"  rows="4" style="width: 100%;" placeholder="Message" required></textarea>
 
             <input class="form-submit-button" type="submit" value="Send">
         </form>
