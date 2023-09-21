@@ -442,6 +442,10 @@ li {
         margin: 32px 0 32px 0;
     }
 
+    .resp-top {
+        margin-top: 4em;
+    }
+
 }
 
 /* Mobile phone screens */
