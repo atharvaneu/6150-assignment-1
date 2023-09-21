@@ -1,4 +1,4 @@
-# 6150-assignment-1
+# 6150-assignment-2
 
 The above site is made using `HTML5` and `CSS` as part of assignment 2 for INFO 6150 course.
 
@@ -14,7 +14,7 @@ It is my portfolio website that contains my academic, professional information a
 
 `index.css`: the global CSS stylesheet where rules for all html files can be found.
 
-`contact-us.html`: contains the form were potential hirers (or even non-hirers) to get in touch with me.
+`contact-me.html`: contains the form were potential hirers (or even non-hirers) to get in touch with me.
 
 `README.md`: this page :)
 
