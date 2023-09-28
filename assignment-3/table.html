@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+
+<html>
+<head>
+	<title>Table CheckList</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<h1 class="center">Atharva Kamble - 002831703</h1>
+	<table id="myTable">
+		<tr>
+			<th></th>
+			<th>STUDENT</th>
+			<th>ADVISOR</th>
+			<th>AWARD<br/>STATUS</th>
+			<th>SEMESTER</th>
+			<th>TYPE</th>
+			<th>BUDGET<br />#</th>
+			<th>PERCENTAGE</th>
+			<th id="delete-header" class="hidden-by-default">DELETE</th>
+			<th id="edit-header" class="hidden-by-default">EDIT</th>
+		</tr>
+		<tr id="row-1" class="student-record">
+			<td><input onclick="selectRow(1,this.checked);" type="checkbox" class="select-row-checkbox"/><br /><br /><img src="down.png" width="25px" onclick="handleDetailsDropdown(1);"/></td>
+			<td>Student 1</td>
+			<td>Teacher 1</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>12345</td>
+			<td>100%</td>
+			<td id="delete-btn-1" class="hidden-by-default"><button onclick="deleteStudentRecord(1);">Delete</button></td>
+			<td id="edit-btn-1" class="hidden-by-default"><button onclick="editStudentRecord(1);">Edit</button></td>
+		</tr>
+		<tr class="hidden-by-default" id="student-details-1"><td colspan="8" >
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		<tr id="row-2" class="student-record" >
+			<td><input onclick="selectRow(2,this.checked);" type="checkbox" class="select-row-checkbox"/><br /><br /><img src="down.png" width="25px" onclick="handleDetailsDropdown(2);"/></td>
+			<td>Student 2</td>
+			<td>Teacher 2</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>23456</td>
+			<td>100%</td>
+			<td id="delete-btn-2" class="hidden-by-default"><button onclick="deleteStudentRecord(2);">Delete</button></td>
+			<td id="edit-btn-2" class="hidden-by-default"><button onclick="editStudentRecord(2);">Edit</button></td>
+		</tr>
+		<tr class="hidden-by-default" id="student-details-2">
+			<td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		<tr id="row-3" class="student-record">
+			<td>
+				<input onclick="selectRow(3, this.checked);" type="checkbox" class="select-row-checkbox"/><br /><br /><img src="down.png" width="25px" onclick="handleDetailsDropdown(3);"/></td>
+			<td>Student 3</td>
+			<td>Teacher 3</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>34567</td>
+			<td>100%</td>
+			<td id="delete-btn-3" class="hidden-by-default"><button onclick="deleteStudentRecord(3);">Delete</button></td>
+			<td id="edit-btn-3" class="hidden-by-default"><button onclick="editStudentRecord(3);">Edit</button></td>
+		</tr>
+		<tr class="hidden-by-default" id="student-details-3"><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+	</table>
+
+	<br /><br />
+	
+	<button id="button">SUBMIT SELECTED AWARDS</button>
+	<button id="add">Add New Student</button>
+
+	<nav class="socialmediaicons"></nav>
+	<script src="script.js"></script>
+	
+</body>
+</html>
