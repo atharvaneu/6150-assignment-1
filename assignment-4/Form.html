@@ -13,64 +13,225 @@
       main{
           padding: 50px;
       }
+
+	  .default-hidden {
+		display: none !important;
+	  }
+
+    #directions {
+      min-width: 400px;
+    }
+
+    #table-container {
+      max-width: 90%;
+      margin: 5rem auto 5rem auto;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
   </style>
+  
  </head>
  <body>
  <div id="container">
 	 
 	 <main>
-	 <h2>Feeback</h2>
+	 <h2>Feedback</h2>
 	 <h3>Love something? Hate something? Let us know!</h3>
 		 Note : Fields marked with an asterisk(*) are mandatory
 		 <br><br>
-		 <form method="post" novalidate>
+		 <form method="post" name="myForm" novalidate>
+			<div>
 			<label>Title*:</label>
 			<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
 			<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
 			<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
+			</div>
 			<br><br>
+			
+			<div>
 			<label for="firstName">First Name*:</label>
 			<input type="text" name="firstName" id="firstName" placeholder="First Name" />	
+			</div>
 			<br><br>
 			
 
+			<div>
 			<label for="lastName">Last Name*:</label>
 			<input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+			</div>
 			<br><br>
 			
 
+			<div>
 			<label for="emailId">Email Id*:</label>
 			<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" />
+			</div>
 			<br><br>
 			
 
+			<div>
 			<label for="phoneNumber">Phone Number*:</label>
 			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" />
+			</div>
 			<br><br>
-			
-            <label for="zipcode">ZipCode*:</label>
-			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+
+			<div>
+            <label for="stAddress1">Street Address 1*:</label>
+			<input type="text" name="stAddress1" id="stAddress1" placeholder="Street Address Line 1" />
+			</div>
+			<br><br>
+
+			<div>
+            <label for="stAddress2">Street Address 2:</label>
+			<input type="text" name="stAddress2" id="stAddress2" placeholder="Street Address Line 2" />
+			</div>
+			<br><br>
+
+			<div>
+   	         	<label for="zipcode">ZipCode*:</label>
+				<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+			</div>
+			<br><br>
+
+			<div>
+   	    <label for="rideapps">Book a ride*:</label>
+				<select name="rideapps" id="rideapps" onchange="handleRideChange(event);"></select>
+      
+			</div>
+
+			<br><br>
+				<input type="text" name="directions" id="directions" placeholder="Let us know any comments about your ride" />
 			<br><br>
              
+			<div>
             <label for="zipcode">How did you hear*:</label>
 			<input type='checkbox' name="source" value="facebook" /> Facebook
             <input type='checkbox' name="source" value="google" /> Google
             <input type='checkbox' name="source" value="yelp" /> Yelp 
+			</div>
 			<br><br> 
              
+			<div>
 			<label for="comments">Comments*:</label>
 			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+			</div>
 			<br><br>
-			<input type="Submit">
-			<input type="Reset">
+			<input type="Submit" id="submit" disabled>
+			<input type="Reset" id="reset">
 			<br><br>
 		 </form>
 	 </main>
  </div>
+ <div id="table-container">
+     <h1>Records</h1>
+     <table >
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Email ID</th>
+              <th>Phone No.</th>
+              <th>Address</th>
+              <th>Zipcode</th>
+              <th>Source</th>
+              <th>Ride preferences</th>
+              <th>Comments</th>
+          </tr>
+      </thead>
+      <tbody id="records">
+          
+      </tbody>
+  </table>
+</div>
+<script>
+  const rideOptions = [
+    {
+      name: "Select a ride",
+      value: "",
+      customize: [],
+    },
+    {
+      name: "Uber",
+      value: "uber",
+      customize: ["Sedan", "SUV", "Compact SUV"],
+    },
+    {
+      name: "Lyft",
+      value: "lyft",
+      customize: ["SUV", "Compact SUV", "Car pool", "Motorbike"],
+    },
+    {
+      name: "RideIt",
+      value: "rideit",
+      customize: ["Private Cab", "Sedan", "SUV", "Compact SUV"],
+    },
+    {
+      name: "Bolt",
+      value: "bolt",
+      customize: ["Bolt Premium", "Sedan", "SUV", "Compact SUV"],
+    },
+    {
+      name: "Cabify",
+      value: "cabify",
+      customize: ["Yellow Cab", "Private Cab", "Sedan", "SUV"],
+    },
+  ];
 
- <script>
- 
- </script>
+  const rideSelectNode = document.getElementById("rideapps");
+  rideOptions.forEach(({ name, value, customize }) => {
+    let optionElement = document.createElement("option");
+
+    optionElement.value = value;
+    optionElement.innerHTML = name;
+    optionElement.id = `${value}-option`;
+
+    customize.forEach((checkboxName) => {
+      const container = document.createElement("div");
+      const input = document.createElement("input");
+      const label = document.createElement("label");
+
+      const idPrefix = checkboxName.trim().replace(" ", "").toLowerCase();
+
+      const checkboxId = `${idPrefix}-checkbox`;
+
+      input.type = "checkbox";
+      input.id = checkboxId;
+      input.value = checkboxName.trim().replace(" ", "").toLowerCase();
+      input.name = 'customize-checkbox';
+      input.classList.add(`${value}-checkbox`);
+      input.classList.add(`customize-checkbox`);
+
+      label.innerHTML = checkboxName;
+      label.for = checkboxId;
+
+      container.id = `${idPrefix}-container-${name}`;
+      container.appendChild(label);
+      container.appendChild(input);
+      container.classList.add("default-hidden");
+      container.classList.add("customizable");
+      container.classList.add(`for-${value}`);
+
+      rideSelectNode.parentNode.appendChild(container);
+    });
+
+    rideSelectNode.append(optionElement);
+  });
+  
+  </script>
+ <script src="script.js"></script>
 
  </body>
 </html>
