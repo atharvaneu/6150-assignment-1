@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Upload</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav>
+        <a href="/index.html" >
+            <h1>
+                Blog
+                <span>
+                    IT
+                </span>
+            </h1>
+        </a>
+
+        <input type="text" placeholder="Search for blogs of your interest!"/>
+
+        <div>
+            <a href="/index.html" >
+                <button class="btn-primary">Home</button>
+            </a>
+        </div>
+    </nav>
+    <section class="landing-secondary">
+        <form class="form">
+             <input type="text" placeholder="Title of your blog" name="title" class="row-1"/>
+             <div class="dual-input-container">
+                <input class="row-2" type="text" placeholder="Author name" name="author" />
+                <input class="row-2" type="text" placeholder="Co author name" name="coauthor" />
+             </div>
+             <textarea class="row-3" type="text" placeholder="You can start writing your blog from here" name="blog"></textarea>
+        <div class="mr-4">
+            <button class="btn-red"><img src="./assets/delete.svg" width="10px"/> Delete</button>
+            <button class="btn-warning">Save as draft</button>
+            <button class="btn-green">Post</button>
+        </div>
+        </form>
+    </section>
+</body>
+</html>

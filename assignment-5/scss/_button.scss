@@ -1,0 +1,47 @@
+@import "config";
+@import "util";
+
+// Used place holder selectors
+%btn {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 8px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  &:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.1s;
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+
+  @include button-shadow(2, $secondary-color);
+  background: $secondary-color;
+}
+
+.btn-secondary {
+  @extend %btn;
+  @include button-shadow(2, $primary-color);
+  background: $primary-color;
+}
+
+.btn-green {
+  @extend %btn;
+  @include button-shadow(2, $green);
+  background: $green;
+}
+
+.btn-warning {
+  @extend %btn;
+  @include button-shadow(2, $warning);
+  background: $warning;
+}
+
+.btn-red {
+  @extend %btn;
+  @include button-shadow(2, $red);
+  background: $red;
+}

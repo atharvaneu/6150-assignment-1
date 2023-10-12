@@ -1,0 +1,89 @@
+@import "config";
+@import "button";
+@import "layout";
+@import "util";
+
+// Used custom properties
+:root {
+  --font-stack: Inter, Helvetica, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  font-family: var(--font-stack);
+}
+
+// used nesting
+nav {
+  background-color: $tertiary-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+
+  h1 {
+    font-family: $title-primary-font;
+    color: $font-primary-color;
+
+    span {
+      font-family: $title-secondary-font;
+    }
+  }
+
+  input {
+    @include stretch-input();
+
+    padding: 10px;
+    outline: none;
+    min-width: 200px;
+    border-radius: 10px;
+  }
+}
+
+%landing {
+  height: 100%;
+  display: flex;
+}
+
+.landing-primary {
+  @extend %landing;
+  background-color: $primary-color;
+  color: $font-primary-color;
+}
+
+.landing-secondary {
+  @extend %landing;
+  background-color: $secondary-color;
+  color: $font-secondary-color;
+}
+
+.blog-container {
+  margin: 16px auto;
+  max-width: 600px;
+
+  h1 {
+    font-family: $title-secondary-font;
+    margin-bottom: 16px;
+  }
+}
+
+.align {
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+}
+
+.mr-4 {
+  margin-right: 6rem;
+}
+
+// Media queries
+@media (max-width: 767px) {
+  .blog-container {
+    margin: 16px;
+  }
+}

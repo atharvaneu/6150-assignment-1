@@ -1,0 +1,31 @@
+@function get_shadow_value($level, $color) {
+  $shadows: (
+    1: 1px 1px 2px,
+    2: 2px 10px 50px,
+    3: 3px 3px 6px,
+  );
+
+  @return map-get($shadows, $level) #{$color};
+}
+
+@mixin button-shadow($level, $color) {
+  @debug get_shadow_value($level, $color);
+
+  &:hover {
+    box-shadow: get_shadow_value($level, $color);
+  }
+}
+
+@mixin stretch-logo() {
+  &:hover {
+    text-underline-offset: 20px;
+    transition: 0.2s ease-out;
+  }
+}
+
+@mixin stretch-input() {
+  &:focus {
+    min-width: 500px;
+    transition: 0.6s cubic-bezier(0.58, -1.17, 0, 1.81);
+  }
+}
