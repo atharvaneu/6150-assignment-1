@@ -29,8 +29,8 @@ All SCSS functions used in the assignment:
 
 ___
 
-`flexbox`: I used the flexbox in the navbar for justifying content in a `space-between` manner. The second flexbox I have used in order to place the blog area in the main section and also to center it.
-`grid`: I have used the grid for the blog's layout along with images and also in `upload.html` for laying out the `<form>`.
+1. `flexbox`: I used the flexbox in the navbar for justifying content in a `space-between` manner. The second flexbox I have used in order to place the blog area in the main section and also to center it.
+2. `grid`: I have used the grid for the blog's layout along with images and also in `upload.html` for laying out the `<form>`.
 
 ___
 -- Atharva
