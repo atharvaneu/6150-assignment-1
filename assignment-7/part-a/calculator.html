@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/part-a/css/index.css" />
+</head>
+<body>
+    <section class="main-container">
+        <h1 id="greeting" class="text-center"></h1>
+        <div class="form-container mt-4">
+            <h4>Calculator</h4>
+            <form id="login-form">
+                <div class="mt-4 field-container">
+                    <label for="num1" class="mt-2">Number 1</label>
+                    <input type="text" id="num1">
+                    <div class="error-msg" id="num1-error"></div>
+                </div>
+                <div class="mt-4 field-container">
+                    <label for="num2" class="mt-2">Number 2</label>
+                    <input type="text" id="num2">
+                    <div class="error-msg" id="num2-error"></div>
+                </div>
+                <div class="mt-4 btn-grp">
+                    <button id="add">Add</button>
+                    <button id="subtract">Subtract</button>
+                    <button id="multiply">Multiply</button>
+                    <button id="divide">Divide</button>
+                </div>
+                <div class="mt-4 field-container">
+                    <label id="result"></label>
+                </div>
+            </form>
+        </div>
+        
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('username');
+
+            if (username) {
+                $("#greeting").text("Hi, " + username);
+            }       
+
+
+            $("#add").on("click", function(e) {
+                e.preventDefault();
+                performOperation((a, b) => a + b);
+            });
+
+            $("#subtract").on("click", function(e) {
+                e.preventDefault();
+                performOperation((a, b) => a - b);
+            });
+
+            $("#multiply").on("click", function(e) {
+                e.preventDefault();
+                performOperation((a, b) => a * b);
+            });
+
+            $("#divide").on("click", function(e) {
+                e.preventDefault();
+                performOperation((a, b) => a / b);
+            });
+
+            $("#num1").on("keyup", function() {
+                validateInput($(this), $("#num1-error"));
+            });
+
+            $("#num2").on("keyup", function() {
+                validateInput($(this), $("#num2-error"));
+            });
+
+            function validateInput(input, errorElement) {
+                const value = input.val();
+                if (isNaN(value) || !isFinite(value) || value.length === 0) {
+                    input.removeClass("success").addClass("danger");
+                    errorElement.text("Please enter a valid number.");
+                } else {
+                    input.removeClass("danger").addClass("success");
+                    errorElement.text("");
+                }
+            }
+
+
+            function performOperation(operation) {
+                const num1Input = $("#num1");
+                const num2Input = $("#num2");
+                const resultElement = $("#result");
+
+                // Validate Number 1
+                const num1 = parseFloat(num1Input.val());
+                if (isNaN(num1) || !isFinite(num1)) {
+                    $("#num1-error").text("Please enter a valid number.");
+                    resultElement.text("");
+                    return;
+                }
+                $("#num1-error").text("");
+
+                // Validate Number 2
+                const num2 = parseFloat(num2Input.val());
+                if (isNaN(num2) || !isFinite(num2)) {
+                    $("#num2-error").text("Please enter a valid number.");
+                    resultElement.text("");
+                    return;
+                }
+                $("#num2-error").text("");
+
+                const result = operation(num1, num2);
+                resultElement.text("Result: " + result);
+            }
+        });
+    </script>
+</body>
+</html>

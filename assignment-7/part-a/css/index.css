@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dela+Gothic+One&family=Inter:wght@900&family=Pixelify+Sans&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+    
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+.mt-2 {
+    margin-top: 8px;
+}
+.mt-4 {
+    margin-top: 16px;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+input {
+    outline: none;
+    padding: 6px;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-container {
+    height: 400px;
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-family: 'Alfa Slab One', serif;
+}
+
+.submit-btn {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.error-msg {
+    font-size: smaller;
+    font-weight: 600;
+    color:red;
+}
+
+.success {
+    border: 2px solid green;
+    border-radius: 6px;
+}
+
+.danger {
+    border: 2px solid red;
+}
+
+
+button {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: bisque;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+.btn-grp {
+    margin: 16px auto;
+    display: flex;
+    justify-content: space-around;
+max-width: 70%;
+}
+
+h4 {
+    text-align: center;
+}
+
+#result {
+    font-weight: 500;
+}
+
+.selected {
+
+    background-color: rgb(65, 101, 47);
+    color: rgb(232, 232, 232);
+    transform: scale(1.1);
+    transition: ease-out 0.2s;
+}
