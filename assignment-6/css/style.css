@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dela+Gothic+One&family=Pixelify+Sans&display=swap");
+button {
+  padding: 16px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.spinner-login {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#alert-box {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-image {
+  background-image: url(/images/powerpoint-templates.png);
+  filter: blur(1rem);
+  opacity: 0.5;
+}
+
+.unblur {
+  filter: blur(0);
+  opacity: 1;
+}
+
+.title {
+  font-family: "Dela Gothic One", sans-serif;
+}
+
+.btn-primary {
+  background-color: rgb(71, 107, 156) !important;
+  border-radius: 10px !important;
+}/*# sourceMappingURL=style.css.map */
