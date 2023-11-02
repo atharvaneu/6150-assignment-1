@@ -76,11 +76,20 @@ $(document).ready(function () {
 
   function checkFormValidity() {
     // Check if all fields are valid
-    if ($(".error-msg").text() === "") {
+    if ($(".error-msg").text() === "" && !hasNullFields()) {
       $(".submit-btn").prop("disabled", false);
     } else {
       $(".submit-btn").prop("disabled", true);
     }
+  }
+
+  function hasNullFields() {
+    // Check for null fields (empty inputs)
+    return (
+      $("#username").val() === "" ||
+      $("#password").val() === "" ||
+      $("#confirm-password").val() === ""
+    );
   }
 
   $("#login-form").submit(function (e) {
