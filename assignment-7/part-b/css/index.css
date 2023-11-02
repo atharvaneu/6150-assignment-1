@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dela+Gothic+One&family=Inter:wght@900&family=Pixelify+Sans&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+    
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.stopwatch-container {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-family: 'Alfa Slab One', serif;
+}
+
+.mt-4 {
+    margin-top: 16px;
+}
+
+#stopwatch {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Dela Gothic One', sans-serif;
+}
+
+button {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: bisque;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgb(65, 101, 47);
+    color: rgb(232, 232, 232);
+    transform: scale(1.1);
+    transition: ease-out 0.2s;
+}
+
+#date-selector {
+    padding: 6px;
+    outline: none;
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+#date-selector:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: ease-in-out 0.2s;
+
+}
+
+.column-layout   {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
