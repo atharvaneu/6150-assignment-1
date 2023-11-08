@@ -1,3 +1,4 @@
 *.zip
 *.prettierrc
 *.vscode
+**/node_modules/
