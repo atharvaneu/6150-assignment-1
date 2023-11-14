@@ -1,15 +1,20 @@
-## Assignment 8
-Create CRUD application using Node, Express, and MongoDB.
+## Assignment 9
+Login using server created in [assignment 8](https://github.com/atharvaneu/6150-assignment-1/edit/main/assignment-8) along with react-routing using `react-router-dom` 
+
 ___
 
 ### FS:
-
+In `/server`
 - `src/index.js`  : starting point of the application
 - `src/app.js`    : creation of the express app
 - `src/routers`   : contains routing methods for the user operations
 - `src/models`    : contains the `mongoose` schema for the `User` module
 - `src/db`        : contains `mongoose.js` which is responsible for connecting with database
 
+
+In `/client`
+- `src/App`: contains all main components and routings within the app (/,/jobs,/aboutus,/contact)
+- `src/Components`: contains higher order components that are commonly used within other components
 ___
 
 ### How to start up the application?
@@ -21,6 +26,7 @@ cd 6150-assignment-1/assignment-8
 
 2. Start Express.js server
 ```
+cd server
 npm run start:dev
 ```
 
@@ -35,7 +41,11 @@ npm run start:dev
   docker restart drag_mdb
   ```
 
-4. Test APIs in Postman
+4. Start React server
+```
+cd client
+npm run start
+```
 
 ___
 
@@ -85,3 +95,10 @@ ___
 > ```
 > /user/getAll
 > ```
+
+
+##### [GET] Login a user
+> ```
+> /user/login
+> ```
+> Returns the user object if found - or else returns `errMsg`
