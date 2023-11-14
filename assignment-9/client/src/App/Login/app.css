@@ -1,0 +1,43 @@
+section {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.field-container input {
+    margin-top: 4px;
+    padding: 10px;
+    outline: none;
+}
+
+.field-container label {
+    text-align: left;
+}
+
+form {
+    text-align: center;
+}
+
+.form-submit-btn {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 100ms linear;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.form-submit-btn:hover {
+    width: 100%;
+    background-color: rgb(47, 126, 67);
+    color: white
+}

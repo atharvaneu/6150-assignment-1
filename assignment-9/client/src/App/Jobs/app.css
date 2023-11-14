@@ -1,0 +1,16 @@
+.apply-btn {
+    width: 50%;
+    margin-top: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.apply-btn:hover {
+    background-color: rgb(47, 126, 67);
+    color: white;
+    transform: scale(1.1);
+    transition: 300ms ease-in-out;
+}

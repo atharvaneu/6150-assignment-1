@@ -1,0 +1,9 @@
+.hover-and-scale {
+
+}
+
+.hover-and-scale:hover {
+    transform: scale(1.4);
+    transition: 300ms ease-out;
+    background-color: rgb(158, 174, 187);
+}

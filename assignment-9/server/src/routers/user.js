@@ -52,6 +52,22 @@ router.get("/user/getAll", async (req, res) => {
   } catch (e) {
     res.status(400).send(e);
   }
+
 });
+// POST: /user/login
+router.post("/user/login", async (req,res) => {
+  const {email,password} = req.body;
+  const {user,errMsg} = await User.findByCredentials(email,password);
+
+  if (errMsg===null) {
+    res.send({user, errMsg: null}).status(200);
+  }
+  else if (errMsg==="USER_NOT_EXIST") {
+    res.send({user:null, errMsg}).status(404);
+  }
+  else if (errMsg==="PASSWORD_NOT_MATCH") {
+    res.send({user:null,errMsg}).status(401);
+  }
+})
 
 module.exports = router;

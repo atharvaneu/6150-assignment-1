@@ -46,6 +46,20 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
+userSchema.statics.findByCredentials = async (email, password) => {
+    const user = await User.findOne({ email })
+    if (!user) {
+      return {user:null, errMsg: "USER_NOT_EXIST"};
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+      return {user:null, errMsg:"PASSWORD_NOT_MATCH"};
+    }
+    return {user,errMsg:null};
+}
+
 const User = mongoose.model("User", userSchema);
 // const User = mongoose.model("User", userSchema, "User");         // this way the collection name would not be auto-pluralled
 module.exports = User;
