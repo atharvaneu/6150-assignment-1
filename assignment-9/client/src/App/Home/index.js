@@ -52,7 +52,13 @@ export default function Home() {
       {stats.map((e) => (
         <Card
           title={e.product}
-          customStyles={{ margin: "10px auto", width: "20%" }}
+          customStyles={{
+            margin: "10px auto",
+            width: "20%",
+            backgroundColor: "#067D00",
+            color: "white",
+            cursor: "pointer",
+          }}
           className="hover-and-scale"
         >
           <p>{e.profit} Profit</p>

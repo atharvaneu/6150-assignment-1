@@ -27,7 +27,9 @@ export default function Nav() {
   return (
     <nav>
       <div className="left-btn-grp">
-        <h1>LOGO</h1>
+        <h1 className="font-title-primary">
+          ADK<span className="font-title-secondary">Enterprises</span>
+        </h1>
       </div>
       <div className="right-btn-grp">
         {navLinks.map(({ path, value, requireAuth }) => {
