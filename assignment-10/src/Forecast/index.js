@@ -38,20 +38,25 @@ export default function Forecast() {
       })
       .then((data) => {
         setWeatherData((prev) => {
+          const list = data?.list?.filter(
+            (l) =>
+              getDayOfWeek(new Date(l?.dt * 1000).getDay()).toLowerCase() ===
+              urlDay.toLowerCase()
+          );
+          console.log(list);
+          const tempList = list.map((e) => e.main.temp);
           return {
             ...data,
-            list: data?.list?.filter(
-              (l) =>
-                getDayOfWeek(new Date(l?.dt * 1000).getDay()).toLowerCase() ===
-                urlDay.toLowerCase()
-            ),
+            list,
+            temp_max: Math.max(...tempList),
+            temp_min: Math.min(...tempList),
           };
         });
         setLoading(() => false);
       })
       .catch((e) => console.error(e));
   }, [coords.lat, coords.long]);
-
+  console.log(">>>>", weatherData);
   if (!days.includes(urlDay))
     return (
       <section className="main-section">
@@ -76,14 +81,13 @@ export default function Forecast() {
       <h2 className="font-heading" style={{ textAlign: "center" }}>
         {urlDay.toUpperCase()} - {new Date(datestring).toLocaleDateString()}
       </h2>
+      <h4 className="font-heading" style={{ textAlign: "center" }}>
+        Maximum temperature: {kelvinToCelsius(weatherData?.temp_max)}&deg;,
+        minimum temperature: {kelvinToCelsius(weatherData?.temp_min)}&deg;
+      </h4>
       <div className="container">
         {weatherData?.list?.map((timeWiseData, index) => {
           const date = new Date(timeWiseData.dt * 1000);
-
-          console.log(
-            timeWiseData?.main?.temp,
-            kelvinToCelsius(timeWiseData?.main?.temp)
-          );
 
           return (
             <WeatherCard key={timeWiseData.dt.toString()}>
