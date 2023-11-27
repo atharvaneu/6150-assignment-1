@@ -1,0 +1,15 @@
+.day-card {
+    background-color: rgb(2, 98, 167);
+    padding: 16px;
+    border-radius: 5px;
+    width: 15rem;
+    margin: 0 1rem;
+    color: white;
+}
+
+.day-card:hover {
+    background-color: rgb(43, 118, 171);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 150ms ease-in-out;
+}

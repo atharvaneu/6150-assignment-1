@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dela+Gothic+One&family=Inter:wght@900&family=Pixelify+Sans&family=Roboto+Slab:wght@100&display=swap');
+
+.main-section {
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    margin: 5rem auto;
+    justify-content: center;
+    max-width: 40%;
+}
+
+button {
+margin: 1rem;
+border:none;
+padding:6px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: 700;
+}
+
+button:hover {
+    transition: 150ms linear;
+    transform: scale(0.9);
+    background-color: rgb(38, 38, 38);
+    color: rgb(205, 205, 205)
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.font-heading {
+    font-family: 'Roboto Slab', serif;
+}

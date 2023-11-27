@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dela+Gothic+One&family=Inter:wght@900&family=Pixelify+Sans&display=swap');
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.right-btn-grp {
+    
+}
+
+a {
+    margin: 0 10px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 6px;
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+
+a:hover {
+    transform: translateY(-0.2rem);
+    transition: 150ms ease-in-out;
+    background-color: rgb(225, 235, 243);
+}
+
+.font-title-primary {
+    font-family: 'Dela Gothic One', sans-serif;
+}
+
+.font-title-secondary {
+    font-family: 'Pixelify Sans', sans-serif;
+}
